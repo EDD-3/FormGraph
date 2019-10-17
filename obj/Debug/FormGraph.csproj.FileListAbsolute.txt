@@ -1,0 +1,10 @@
+C:\Users\Eduardo\source\repos\FormGraph\bin\Debug\FormGraph.exe.config
+C:\Users\Eduardo\source\repos\FormGraph\bin\Debug\FormGraph.exe
+C:\Users\Eduardo\source\repos\FormGraph\bin\Debug\FormGraph.pdb
+C:\Users\Eduardo\source\repos\FormGraph\obj\Debug\FormGraph.csprojAssemblyReference.cache
+C:\Users\Eduardo\source\repos\FormGraph\obj\Debug\FormGraph.frmElViajero.resources
+C:\Users\Eduardo\source\repos\FormGraph\obj\Debug\FormGraph.Properties.Resources.resources
+C:\Users\Eduardo\source\repos\FormGraph\obj\Debug\FormGraph.csproj.GenerateResource.cache
+C:\Users\Eduardo\source\repos\FormGraph\obj\Debug\FormGraph.csproj.CoreCompileInputs.cache
+C:\Users\Eduardo\source\repos\FormGraph\obj\Debug\FormGraph.exe
+C:\Users\Eduardo\source\repos\FormGraph\obj\Debug\FormGraph.pdb
