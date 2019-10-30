@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmElViajero));
             this.pnlGraph = new System.Windows.Forms.Panel();
             this.lbxGraph = new System.Windows.Forms.ListBox();
             this.pbxCity = new System.Windows.Forms.PictureBox();
             this.pnlToolbox = new System.Windows.Forms.Panel();
+            this.lblDistance = new System.Windows.Forms.Label();
             this.btnGetDistance = new System.Windows.Forms.Button();
             this.lblDistanceIs = new System.Windows.Forms.Label();
             this.lblDestination = new System.Windows.Forms.Label();
@@ -76,7 +76,6 @@
             // 
             // pbxCity
             // 
-            this.pbxCity.Image = ((System.Drawing.Image)(resources.GetObject("pbxCity.Image")));
             this.pbxCity.Location = new System.Drawing.Point(158, 103);
             this.pbxCity.Name = "pbxCity";
             this.pbxCity.Size = new System.Drawing.Size(287, 248);
@@ -86,6 +85,7 @@
             // 
             // pnlToolbox
             // 
+            this.pnlToolbox.Controls.Add(this.lblDistance);
             this.pnlToolbox.Controls.Add(this.btnGetDistance);
             this.pnlToolbox.Controls.Add(this.lblDistanceIs);
             this.pnlToolbox.Controls.Add(this.lblDestination);
@@ -109,6 +109,14 @@
             this.pnlToolbox.Size = new System.Drawing.Size(177, 568);
             this.pnlToolbox.TabIndex = 1;
             // 
+            // lblDistance
+            // 
+            this.lblDistance.AutoSize = true;
+            this.lblDistance.Location = new System.Drawing.Point(90, 495);
+            this.lblDistance.Name = "lblDistance";
+            this.lblDistance.Size = new System.Drawing.Size(0, 17);
+            this.lblDistance.TabIndex = 19;
+            // 
             // btnGetDistance
             // 
             this.btnGetDistance.Location = new System.Drawing.Point(3, 515);
@@ -117,6 +125,7 @@
             this.btnGetDistance.TabIndex = 18;
             this.btnGetDistance.Text = "Get Distance";
             this.btnGetDistance.UseVisualStyleBackColor = true;
+            this.btnGetDistance.Click += new System.EventHandler(this.BtnGetDistance_Click);
             // 
             // lblDistanceIs
             // 
@@ -307,6 +316,7 @@
         private System.Windows.Forms.Label lblDistanceBetweenNodes;
         private System.Windows.Forms.PictureBox pbxCity;
         private System.Windows.Forms.ListBox lbxGraph;
+        private System.Windows.Forms.Label lblDistance;
     }
 }
 

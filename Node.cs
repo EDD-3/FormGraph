@@ -9,14 +9,14 @@ namespace FormGraph
 {
     class Node
     {
-        List<Tuple<Node, double>> Connections { get; set; }
+        public List<Tuple<Node, double>> Connections { get; set; }
         public string Name { get; set; }
-        Point Coordinate { get; set; }
+        public Point Coordinate { get; set; }
 
         public Node(string name, Point coordinate)
         {
             Name = name;
-            Coordinate = Coordinate;
+            Coordinate = coordinate;
             Connections = new List<Tuple<Node, double>>();
         }
 
@@ -31,5 +31,20 @@ namespace FormGraph
 
             Connections.Add(Connection);
         }
+
+        public double GetDistance(Node end)
+        {
+            foreach(Tuple<Node, double> t in Connections)
+            {
+                if (t.Item1 == end)
+                {
+                    return t.Item2;
+                }
+            }
+
+            return 0;
+        }
+
+
     }
 }

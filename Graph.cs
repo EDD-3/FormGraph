@@ -23,9 +23,10 @@ namespace FormGraph
         {
             List<string> list = new List<string>();
 
-            Nodes.ForEach( (Node n) => list.Add(n.Name));
-
-            //foreach(Node node in Nodes) list.Add(node.Name);
+            foreach (Node node in Nodes)
+            {
+                list.Add(node.Name);
+            }
             
             return list;
         }
@@ -35,7 +36,8 @@ namespace FormGraph
             //El bromas
         }
 
-        public Node GetNode(string name) => Nodes.Find( (Node n) => n.Name == name);
+        public Node GetNode(string name) => Nodes.Find((Node n) => n.Name == name);
+         
 
        /** public Node GetNode(string name)
         {
