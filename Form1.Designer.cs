@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.pnlGraph = new System.Windows.Forms.Panel();
-            this.lbxGraph = new System.Windows.Forms.ListBox();
-            this.pbxCity = new System.Windows.Forms.PictureBox();
             this.pnlToolbox = new System.Windows.Forms.Panel();
             this.lblDistance = new System.Windows.Forms.Label();
             this.btnGetDistance = new System.Windows.Forms.Button();
@@ -50,41 +48,23 @@
             this.txtNodeName = new System.Windows.Forms.TextBox();
             this.lblNodeName = new System.Windows.Forms.Label();
             this.lblNewNode = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.pnlGraph.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxCity)).BeginInit();
+            this.lbxPath = new System.Windows.Forms.ListBox();
             this.pnlToolbox.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlGraph
             // 
-            this.pnlGraph.Controls.Add(this.lbxGraph);
-            this.pnlGraph.Controls.Add(this.pbxCity);
+            this.pnlGraph.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pnlGraph.Location = new System.Drawing.Point(187, 12);
             this.pnlGraph.Name = "pnlGraph";
-            this.pnlGraph.Size = new System.Drawing.Size(601, 568);
+            this.pnlGraph.Size = new System.Drawing.Size(1368, 568);
             this.pnlGraph.TabIndex = 0;
-            // 
-            // lbxGraph
-            // 
-            this.lbxGraph.FormattingEnabled = true;
-            this.lbxGraph.ItemHeight = 16;
-            this.lbxGraph.Location = new System.Drawing.Point(105, 152);
-            this.lbxGraph.Name = "lbxGraph";
-            this.lbxGraph.Size = new System.Drawing.Size(403, 340);
-            this.lbxGraph.TabIndex = 1;
-            // 
-            // pbxCity
-            // 
-            this.pbxCity.Location = new System.Drawing.Point(158, 103);
-            this.pbxCity.Name = "pbxCity";
-            this.pbxCity.Size = new System.Drawing.Size(287, 248);
-            this.pbxCity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxCity.TabIndex = 0;
-            this.pbxCity.TabStop = false;
+            this.pnlGraph.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGraph_Paint);
+            this.pnlGraph.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.PnlGraph_MouseDoubleClick);
             // 
             // pnlToolbox
             // 
+            this.pnlToolbox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnlToolbox.Controls.Add(this.lblDistance);
             this.pnlToolbox.Controls.Add(this.btnGetDistance);
             this.pnlToolbox.Controls.Add(this.lblDistanceIs);
@@ -103,7 +83,6 @@
             this.pnlToolbox.Controls.Add(this.txtNodeName);
             this.pnlToolbox.Controls.Add(this.lblNodeName);
             this.pnlToolbox.Controls.Add(this.lblNewNode);
-            this.pnlToolbox.Controls.Add(this.btnAdd);
             this.pnlToolbox.Location = new System.Drawing.Point(4, 12);
             this.pnlToolbox.Name = "pnlToolbox";
             this.pnlToolbox.Size = new System.Drawing.Size(177, 568);
@@ -265,27 +244,26 @@
             this.lblNewNode.TabIndex = 1;
             this.lblNewNode.Text = "NewNode";
             // 
-            // btnAdd
+            // lbxPath
             // 
-            this.btnAdd.Location = new System.Drawing.Point(6, 83);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(150, 26);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            this.lbxPath.FormattingEnabled = true;
+            this.lbxPath.ItemHeight = 16;
+            this.lbxPath.Location = new System.Drawing.Point(1575, 12);
+            this.lbxPath.Name = "lbxPath";
+            this.lbxPath.Size = new System.Drawing.Size(337, 468);
+            this.lbxPath.TabIndex = 2;
             // 
             // frmElViajero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 574);
+            this.ClientSize = new System.Drawing.Size(1924, 624);
+            this.Controls.Add(this.lbxPath);
             this.Controls.Add(this.pnlToolbox);
             this.Controls.Add(this.pnlGraph);
             this.Name = "frmElViajero";
             this.Text = "El Viajero";
-            this.pnlGraph.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxCity)).EndInit();
+            this.Load += new System.EventHandler(this.FrmElViajero_Load);
             this.pnlToolbox.ResumeLayout(false);
             this.pnlToolbox.PerformLayout();
             this.ResumeLayout(false);
@@ -299,7 +277,6 @@
         private System.Windows.Forms.TextBox txtNodeName;
         private System.Windows.Forms.Label lblNodeName;
         private System.Windows.Forms.Label lblNewNode;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnConnect;
@@ -314,9 +291,8 @@
         private System.Windows.Forms.ComboBox cbxStart;
         private System.Windows.Forms.Label lblSource;
         private System.Windows.Forms.Label lblDistanceBetweenNodes;
-        private System.Windows.Forms.PictureBox pbxCity;
-        private System.Windows.Forms.ListBox lbxGraph;
         private System.Windows.Forms.Label lblDistance;
+        private System.Windows.Forms.ListBox lbxPath;
     }
 }
 

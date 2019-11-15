@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace FormGraph
 {
-    class Node
+    public class Node
     {
         public List<Tuple<Node, double>> Connections { get; set; }
         public string Name { get; set; }
